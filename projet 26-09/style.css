@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: rgb(222, 230, 230);
+  font-family: 'League Gothic', sans-serif;
+}
+/***************************NAVBAR*******************/
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+}
+/**********Logo navbar********/
+.logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    margin-left: 5%;
+    height: 35%;
+}
+/*******Liens navbar******/
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 65%;
+}
+.link  li a{
+    font-size: 1.1em;
+    color: #164479;
+}
+.link  li a img{
+    height: 20px;
+}
+
+@media (min-width: 480px) {
+    nav{
+        height: 80px;
+    }
+    .link  li a{
+        font-size: 1.2em;
+    }
+    .link  li a img{
+        height: 25px;
+    }
+    .logo { 
+        width: 25%;
+    }
+}
+/************AFFICHAGE Tablette****************/
+@media (min-width: 767px) {
+    nav{
+        height: 85px;
+    }
+    .link  li a{
+        font-size: 1.4em;
+    }
+    .link  li a img{
+        height: 28px;
+    }
+}
+/*********AFFICHAGE Tablette/ PC Portable*******/
+@media (min-width: 991px) {
+    nav{
+        height: 90px;
+    }
+    .link  li a{
+        font-size: 1.5em;
+    }
+    .link  li a img{
+        height: 30px;
+    }
+}
+/************AFFICHAGE PC Portable/PC petit***********/
+@media (min-width: 1200px) {
+    nav{
+        height: 95px;
+    }
+    .link  li a{
+        font-size: 1.6em;
+    }
+    .link  li a img{
+        height: 35px;
+    }
+}
+/************AFFICHAGE PC moyen***********/
+@media (min-width: 1400px) {
+    nav{
+        height: 100px;
+    }
+    .link  li a{
+        font-size: 1.8em;
+    }
+    .link  li a img{
+        height: 40px;
+    }
+
+}
+/************AFFICHAGE PC grand***********/
+@media (min-width: 1600px) {
+    nav{
+        height: 110px;
+    }
+    .link  li a{
+        font-size: 2em;
+    }
+    .link  li a img{
+        height: 45px;
+    }
+    .logo img{
+        height: 50%;
+    }
+}
+
+
+.human{
+    height: 220px;
+    width: 100%;
+    background-image: url("img/annie-spratt-QckxruozjRg-unsplash.webp");
+    background-size: cover;
+    background-position: center 20% ;
+}
+.human h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+ 
+
+}
