@@ -5,12 +5,25 @@
   list-style: none;
 }
 
+/* @font-face {
+    font-family: "Amicale-regular";
+    src:
+      url("tp-integration/assets/fonts/amicale-regular/Amicale-Regular.otf") format("opentype");
+  }
+   */
 body {
   width: 100vw;
   overflow-x: hidden;
-  background-color: rgb(222, 230, 230);
-  font-family: 'League Gothic', sans-serif;
 }
+a,
+h1,
+h2 {
+  font-family: "League Gothic", sans-serif;
+}
+p {
+  font-family: "Inclusive Sans", sans-serif;
+}
+
 /***************************NAVBAR*******************/
 nav {
   display: flex;
@@ -20,122 +33,297 @@ nav {
   background-color: white;
 }
 /**********Logo navbar********/
-.logo{
-    height: 100%;
-    display: flex;
-    align-items: center;
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
-.logo img{
-    margin-left: 5%;
-    height: 35%;
+.logo img {
+  margin-left: 5%;
+  height: 35%;
 }
 /*******Liens navbar******/
 .link {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 65%;
 }
-.link  li a{
-    font-size: 1.1em;
-    color: #164479;
+.link li a {
+  font-size: 1.1em;
+  color: #164479;
 }
-.link  li a img{
-    height: 20px;
+.link li a img {
+  height: 20px;
 }
 
+/************font-size et couleur petit titre et texte******/
+h2 {
+  font-size: 1.2em;
+}
+p {
+  font-size: 0.7em;
+}
+.green-p h2, .q-green h2 {
+  color: #a7e43b;
+}
+.blue-p h2, .q-blue h2 {
+  color: #164479;
+}
+.orange-p h2, .q-orange h2 {
+  color: #ff914d;
+}
+/*****************Background image + titre********************/
+.human {
+  background-image: url("img/human.webp");
+  background-position: center 20%;
+}
+.sympa {
+  background-image: url("img/sympa.webp");
+  background-position: center 62%;
+}
+.reference{
+    background-image: url("img/reference.webp");
+    background-position: center 12%;
+}
+.human,
+.sympa,
+.reference {
+  height: 105px;
+  width: 100%;
+  background-size: cover;
+}
+.human h1,
+.sympa h1,
+.reference h1 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3em;
+}
+/**********************bloc blanc du haut***************/
+.white-bloc-top {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/************texte du haut******/
+.first-part {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+.first-part h2 {
+  color: #164479;
+}
+
+/************3 parties du bas******/
+.second-part {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.second-part img {
+  width: 30px;
+}
+
+.second-part div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10%;
+}
+.second-part p {
+  text-align: center;
+}
+
+/**********************bloc blanc mid***************/
+.white-bloc-mid{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10%;
+  padding-top: 5%;
+}
+.quality{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+.q-orange, .q-blue, .q-green{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 10%;
+}
+/*******bouton******/
+.offers button{
+  border: none;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: white;
+  background-color: #164479;
+  font-family: "League Gothic", sans-serif;
+  font-size: 1.2em;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px #999;
+  cursor: pointer;
+}
+.offers button:hover{
+  padding: 10px 25px;
+  background-color: #1b508b;
+}
+.offers button:active{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  transform: scale(0.9);
+}
+/**********************bloc blanc bottom***************/
+
+
+
+
+
+
+
+
+
+
+
+/**********************RESPONSIVE***************/
 @media (min-width: 480px) {
-    nav{
-        height: 80px;
-    }
-    .link  li a{
-        font-size: 1.2em;
-    }
-    .link  li a img{
-        height: 25px;
-    }
-    .logo { 
-        width: 25%;
-    }
+  nav {
+    height: 80px;
+  }
+  .link li a {
+    font-size: 1.2em;
+  }
+  .link li a img {
+    height: 25px;
+  }
+  .logo {
+    width: 25%;
+  }
+  .human,
+  .sympa {
+    height: 120px;
+  }
+  .human h1,
+  .sympa h1 {
+    font-size: 3.5em;
+  }
 }
 /************AFFICHAGE Tablette****************/
 @media (min-width: 767px) {
-    nav{
-        height: 85px;
-    }
-    .link  li a{
-        font-size: 1.4em;
-    }
-    .link  li a img{
-        height: 28px;
-    }
+  nav {
+    height: 85px;
+  }
+  .link li a {
+    font-size: 1.4em;
+  }
+  .link li a img {
+    height: 28px;
+  }
+  .human,
+  .sympa {
+    height: 170px;
+  }
+  .human h1,
+  .sympa h1 {
+    font-size: 4em;
+  }
 }
 /*********AFFICHAGE Tablette/ PC Portable*******/
 @media (min-width: 991px) {
-    nav{
-        height: 90px;
-    }
-    .link  li a{
-        font-size: 1.5em;
-    }
-    .link  li a img{
-        height: 30px;
-    }
+  nav {
+    height: 90px;
+  }
+  .link li a {
+    font-size: 1.5em;
+  }
+  .link li a img {
+    height: 30px;
+  }
+  .human,
+  .sympa {
+    height: 180px;
+  }
+  .human h1,
+  .sympa h1 {
+    font-size: 4.5em;
+  }
 }
 /************AFFICHAGE PC Portable/PC petit***********/
 @media (min-width: 1200px) {
-    nav{
-        height: 95px;
-    }
-    .link  li a{
-        font-size: 1.6em;
-    }
-    .link  li a img{
-        height: 35px;
-    }
+  nav {
+    height: 95px;
+  }
+  .link li a {
+    font-size: 1.6em;
+  }
+  .link li a img {
+    height: 35px;
+  }
+  .human,
+  .sympa {
+    height: 190px;
+  }
+  .human h1,
+  .sympa h1 {
+    font-size: 5em;
+  }
 }
 /************AFFICHAGE PC moyen***********/
 @media (min-width: 1400px) {
-    nav{
-        height: 100px;
-    }
-    .link  li a{
-        font-size: 1.8em;
-    }
-    .link  li a img{
-        height: 40px;
-    }
-
+  nav {
+    height: 100px;
+  }
+  .link li a {
+    font-size: 1.8em;
+  }
+  .link li a img {
+    height: 40px;
+  }
+  .human,
+  .sympa {
+    height: 200px;
+  }
+  .human h1,
+  .sympa h1 {
+    font-size: 5.5em;
+  }
 }
 /************AFFICHAGE PC grand***********/
 @media (min-width: 1600px) {
-    nav{
-        height: 110px;
-    }
-    .link  li a{
-        font-size: 2em;
-    }
-    .link  li a img{
-        height: 45px;
-    }
-    .logo img{
-        height: 50%;
-    }
-}
-
-
-.human{
+  nav {
+    height: 110px;
+  }
+  .link li a {
+    font-size: 2em;
+  }
+  .link li a img {
+    height: 45px;
+  }
+  .logo img {
+    height: 50%;
+  }
+  .human,
+  .sympa {
     height: 220px;
-    width: 100%;
-    background-image: url("img/annie-spratt-QckxruozjRg-unsplash.webp");
-    background-size: cover;
-    background-position: center 20% ;
-}
-.human h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
- 
-
+  }
+  .human h1,
+  .sympa h1 {
+    font-size: 6em;
+  }
 }
